@@ -15,7 +15,7 @@ LAWS OF GEOMETRON:
     LOOK TO THE INSECTS
     LANGUAGE IS THE TOOL THE MIND USES TO PARSE REALITY
     
-hello card, your first geometron card, the start of a new deck, a new hypercube, a new universe of universes.  
+Penn Ave Meta Map, from WH to Capitol
 
 http://www.lafelabs.org/penn/
 
@@ -23,10 +23,11 @@ QR Code image:
 http://www.lafelabs.org/penn/qrcode.png
 
 this code:
-https://raw.githubusercontent.com/LafeLabs/penn/master/hello/index.html
+
+https://raw.githubusercontent.com/LafeLabs/penn/master/index.html
 
 -->
-    <title>/startdeck/hello/</title>
+    <title>/penn/</title>
 <!--</page01>-->
 <script id = "bytecodeScript">
 /*
@@ -454,6 +455,21 @@ function doTheThing(localCommand){
     if(localCommand >= 0200 && localCommand <= 0277){//shapes 
             drawGlyph(currentTable[localCommand]);    	    
     }
+    if(localCommand >= 0400 && localCommand < 0500){
+        for(var index = 0;index < dataArray.length;index++){
+            var thisAddress = parseInt(dataArray[index].id.substring(4),8);
+            console.log(thisAddress);
+            if(thisAddress == localCommand){
+                dataIndex = index;
+                console.log(dataIndex);
+            }
+        }
+        initPage();
+    }
+    if(localCommand >= 0600 && localCommand < 0700){
+        var thisID = "div0" + localCommand.toString(8);
+        currentHTML += document.getElementById(thisID).innerHTML;
+    }
     if(localCommand >= 01000 && localCommand <= 01777){//symbol glyphs
             drawGlyph(currentTable[localCommand]);    	    
     } 
@@ -848,60 +864,71 @@ function doTheThing(localCommand){
     if(localCommand == 0370){//<page0370>
         boxes0630[0].innerHTML = currentHTML;
         currentHTML = "";
-        data0430[0].onOff = 1;
-        data0430[0].w = side/unit;
-        data0430[0].left = (x - x0)/unit;
-        data0430[0].top = (y0 - y)/unit;
+        currentData.boxes[0].onOff = 1;
+        boxes0630[0].style.left = x.toString() + "px";
+        boxes0630[0].style.top = y.toString() + "px";
+        boxes0630[0].style.width = side.toString() + "px";
+        boxes0630[0].style.fontSize = (currentData.boxes[0].fontSize*side).toString() + "px";
+        boxes0630[0].style.height = (side).toString() + "px";
 
     //</page0370>
     }
     if(localCommand == 0371){//<page0371>
         boxes0630[1].innerHTML = currentHTML;
         currentHTML = "";
-        data0430[1].onOff = 1;
-        data0430[1].w = side/unit;
-        data0430[1].left = (x - x0)/unit;
-        data0430[1].top = (y0 - y)/unit;
+        currentData.boxes[1].onOff = 1;
+        boxes0630[1].style.left = x.toString() + "px";
+        boxes0630[1].style.top = y.toString() + "px";
+        boxes0630[1].style.width = side.toString() + "px";
+        boxes0630[1].style.fontSize = (currentData.boxes[1].fontSize*side).toString() + "px";
+        boxes0630[1].style.height = (side).toString() + "px";
     //</page0371>
     }
     if(localCommand == 0372){//<page0372>
         boxes0630[2].innerHTML = currentHTML;
         currentHTML = "";
-        data0430[2].onOff = 1;
-        data0430[2].w = side/unit;
-        data0430[2].left = (x - x0)/unit;
-        data0430[2].top = (y0 - y)/unit;
+        currentData.boxes[2].onOff = 1;
+        boxes0630[2].style.left = x.toString() + "px";
+        boxes0630[2].style.top = y.toString() + "px";
+        boxes0630[2].style.width = side.toString() + "px";
+        boxes0630[2].style.fontSize = (currentData.boxes[2].fontSize*side).toString() + "px";
+        boxes0630[2].style.height = (side).toString() + "px";
 
     //</page0372>
     }
     if(localCommand == 0373){//<page0373>
         boxes0630[3].innerHTML = currentHTML;
         currentHTML = "";
-        data0430[3].onOff = 1;
-        data0430[3].w = side/unit;
-        data0430[3].left = (x - x0)/unit;
-        data0430[3].top = (y0 - y)/unit;
+        currentData.boxes[3].onOff = 1;
+        boxes0630[3].style.left = x.toString() + "px";
+        boxes0630[3].style.top = y.toString() + "px";
+        boxes0630[3].style.width = side.toString() + "px";
+        boxes0630[3].style.fontSize = (currentData.boxes[3].fontSize*side).toString() + "px";
+        boxes0630[3].style.height = (side).toString() + "px";
 
     //</page0373>
     }
     if(localCommand == 0374){//<page0374>
         boxes0630[4].innerHTML = currentHTML;
         currentHTML = "";
-        data0430[4].onOff = 1;
-        data0430[4].w = side/unit;
-        data0430[4].left = (x - x0)/unit;
-        data0430[4].top = (y0 - y)/unit;
+        currentData.boxes[4].onOff = 1;
+        boxes0630[4].style.left = x.toString() + "px";
+        boxes0630[4].style.top = y.toString() + "px";
+        boxes0630[4].style.width = side.toString() + "px";
+        boxes0630[4].style.fontSize = (currentData.boxes[4].fontSize*side).toString() + "px";
+        boxes0630[4].style.height = (side).toString() + "px";
 
     //</page0374>
     }
     if(localCommand == 0375){//<page0375>
         boxes0630[5].innerHTML = currentHTML;
         currentHTML = "";
-        data0430[5].onOff = 1;
-        data0430[5].w = side/unit;
-        data0430[5].left = (x - x0)/unit;
-        data0430[5].top = (y0 - y)/unit;
-
+        currentData.boxes[5].onOff = 1;
+        boxes0630[5].style.left = x.toString() + "px";
+        boxes0630[5].style.top = y.toString() + "px";
+        boxes0630[5].style.width = side.toString() + "px";
+        boxes0630[5].style.fontSize = (currentData.boxes[5].fontSize*side).toString() + "px";
+        boxes0630[5].style.height = (side).toString() + "px";
     //</page0375>
     }
 
@@ -1139,76 +1166,62 @@ doTheThing(07);//initialize Geometron global variables
         </tr>
 </table>
 <!--</page03>-->             
-<!--<page0430>-->
-<div id = "data0430" style = "display:none">
-[
-    {
-        "w":1,
-        "h":1,
-        "fontSize":0.2,
-        "left":0,
-        "top":0,
-        "onOff":0
-    },
-    {
-        "w":1,
-        "h":1,
-        "fontSize":0.2,
-        "left":0,
-        "top":0,
-        "onOff":0
-    },
-    {
-        "w":1,
-        "h":1,
-        "fontSize":0.2,
-        "left":0,
-        "top":0,
-        "onOff":0
-    },
-    {
-        "w":1,
-        "h":1,
-        "fontSize":0.2,
-        "left":0,
-        "top":0,
-        "onOff":0
-    },
-    {
-        "w":1,
-        "h":1,
-        "fontSize":0.2,
-        "left":0,
-        "top":0,
-        "onOff":0
-    },
-    {
-        "w":1,
-        "h":1,
-        "fontSize":0.2,
-        "left":0,
-        "top":0,
-        "onOff":0
-    },
-    {
-        "w":1,
-        "h":1,
-        "fontSize":0.2,
-        "left":0,
-        "top":0,
-        "onOff":0
-    },
-    {
-        "w":1,
-        "h":1,
-        "fontSize":0.2,
-        "left":0,
-        "top":0,
-        "onOff":0
-    }
-]
+<!--<page0401>-->
+<div id = "data0401" style = "display:none" class = "data">
+        {
+            "shapes":[
+                "0270:0326,0333,0333,0331,0334,0306,0352,0335,0201,0201,0201,0201,0336,0336,0201,0304,0335,0335,0336,0333,0337,0337,0337,0201,0201,0201,0201,0336,0336,0201,0334,0336,0330,0334,0300,0341,0337,0341,0336,0336,0330,0330,0332,0332,0332,0336,0330,0336,0330,0333,0333,0337,0337,0310,0337,0313,074,0141,040,0150,0162,0145,0146,040,075,040,042,0150,0164,0164,0160,072,057,057,0167,0167,0167,056,0146,0142,0151,056,0147,0157,0166,042,076,0106,0102,0111,074,057,0141,076,0370,0330,0333,0333,0333,0333,0333,0331,0336,0331,0333,0333,0337,0337,074,0150,063,040,0157,0156,0143,0154,0151,0143,0153,040,075,040,042,0144,0157,0124,0150,0145,0124,0150,0151,0156,0147,050,060,064,060,062,051,042,076,0156,0145,0170,0164,074,057,0150,063,076,0371,"
+            ],
+            "glyph":"0326,0333,0333,0331,0334,0306,0352,0335,0201,0201,0201,0201,0336,0336,0201,0304,0335,0335,0336,0333,0337,0337,0337,0201,0201,0201,0201,0336,0336,0201,0334,0336,0330,0334,0300,0341,0337,0341,0336,0336,0330,0330,0332,0332,0332,0336,0330,0336,0330,0333,0333,0337,0337,0310,0337,0313,074,0141,040,0150,0162,0145,0146,040,075,040,042,0150,0164,0164,0160,072,057,057,0167,0167,0167,056,0146,0142,0151,056,0147,0157,0166,042,076,0106,0102,0111,074,057,0141,076,0370,0330,0333,0333,0333,0333,0333,0331,0336,0331,0333,0333,0337,0337,074,0150,063,040,0157,0156,0143,0154,0151,0143,0153,040,075,040,042,0144,0157,0124,0150,0145,0124,0150,0151,0156,0147,050,060,064,060,062,051,042,076,0156,0145,0170,0164,074,057,0150,063,076,0371,",
+            "url":"http://www.lafelabs.org/startdeck/hello/",
+            "raw":"https://raw.githubusercontent.com/LafeLabs/startdeck/master/hello/index.html",
+            "w":500,
+            "h":500,
+            "x0":671.5,
+            "y0":336,
+            "unit":100.00000000000001,
+            "imgurl":"https://i.imgur.com/f1C3bms.jpg",
+            "imgw":4,
+            "left":-2,
+            "boxes":[{"w":1,"h":1,"fontSize":0.2,"left":0,"top":0,"onOff":0},{"w":1,"h":1,"fontSize":0.2,"left":0,"top":0,"onOff":0},{"w":1,"h":1,"fontSize":0.2,"left":0,"top":0,"onOff":0},{"w":1,"h":1,"fontSize":0.2,"left":0,"top":0,"onOff":0},{"w":1,"h":1,"fontSize":0.2,"left":0,"top":0,"onOff":0},{"w":1,"h":1,"fontSize":0.2,"left":0,"top":0,"onOff":0},{"w":1,"h":1,"fontSize":0.2,"left":0,"top":0,"onOff":0},{"w":1,"h":1,"fontSize":0.2,"left":0,"top":0,"onOff":0}],
+            "top":-3
+            }
+                                   
 </div>
-<!--</page0430>-->
+<!--</page0401>-->
+<!--<page0402>-->
+<div id = "data0402" style = "display:none" class = "data">
+        {
+            "shapes":[
+                "0270:0330,0336,0332,0332,0332,0336,0333,0330,0330,0332,0332,0330,0337,0337,074,0141,040,0150,0162,0145,0146,040,075,040,042,0167,0167,0167,056,0160,0141,0165,0154,055,0165,0163,0141,056,0143,0157,0155,057,0145,0156,057,042,076,0160,0141,0165,0154,074,0142,0162,057,076,0142,0141,0153,0145,0162,0171,074,057,0141,076,0370,0331,0324,0331,0333,0333,0336,0336,0332,0336,0330,0330,0336,0330,0337,0337,0201,0201,0336,0201,0334,0337,0337,0201,0201,0201,0336,0336,0201,0334,0337,0334,0306,0352,0335,0337,0337,0201,0336,0201,0336,0201,0334,0304,0334,0337,0336,0330,0332,0332,0336,0332,0332,0330,01160,01141,01165,01154,01040,01164,01162,01151,01141,01156,01147,01154,01145,"
+            ],
+            "glyph":"0330,0336,0332,0332,0332,0336,0333,0330,0330,0332,0332,0330,0337,0337,074,0141,040,0150,0162,0145,0146,040,075,040,042,0167,0167,0167,056,0160,0141,0165,0154,055,0165,0163,0141,056,0143,0157,0155,057,0145,0156,057,042,076,0160,0141,0165,0154,074,0142,0162,057,076,0142,0141,0153,0145,0162,0171,074,057,0141,076,0370,0331,0324,0331,0333,0333,0336,0336,0332,0336,0330,0330,0336,0330,0337,0337,0201,0201,0336,0201,0334,0337,0337,0201,0201,0201,0336,0336,0201,0334,0337,0334,0306,0352,0335,0337,0337,0201,0336,0201,0336,0201,0334,0304,0334,0337,0336,0330,0332,0332,0336,0332,0332,0330,01160,01141,01165,01154,01040,01164,01162,01151,01141,01156,01147,01154,01145,",
+            "url":"http://www.lafelabs.org/startdeck/hello/",
+            "raw":"https://raw.githubusercontent.com/LafeLabs/startdeck/master/hello/index.html",
+            "w":500,
+            "h":500,
+            "x0":671.5,
+            "y0":336,
+            "unit":100.00000000000001,
+            "imgurl":"https://i.imgur.com/KIZldWY.png",
+            "imgw":4,
+            "left":-2,
+            "boxes":[{"w":1,"h":1,"fontSize":0.2,"left":-1.7499999999999998,"top":1.7499999999999998,"onOff":1},{"w":1,"h":1,"fontSize":0.2,"left":0,"top":0,"onOff":0},{"w":1,"h":1,"fontSize":0.2,"left":0,"top":0,"onOff":0},{"w":1,"h":1,"fontSize":0.2,"left":0,"top":0,"onOff":0},{"w":1,"h":1,"fontSize":0.2,"left":0,"top":0,"onOff":0},{"w":1,"h":1,"fontSize":0.2,"left":0,"top":0,"onOff":0},{"w":1,"h":1,"fontSize":0.2,"left":0,"top":0,"onOff":0},{"w":1,"h":1,"fontSize":0.2,"left":0,"top":0,"onOff":0}],
+            "top":-1
+            }
+            
+</div>
+<!--</page0402>-->
+<!--<page0601>-->
+<div style = "display:none;" class = "html" id = "div0601">
+<h1 style = "color:blue;">DERP</h1>
+</div>
+<!--</page0601>-->        
+<!--<page0602>-->
+<div style = "display:none;" class = "html" id = "div0602">
+<h2 style = "color:red;">FOO</h2>
+</div>
+<!--</page0602>-->                        
 <!--<page0630>-->
 <div class = "page screenpage" id = "div0630">
         <canvas id = "invisibleCanvas" style = "display:none"></canvas>
@@ -1289,79 +1302,30 @@ doTheThing(07);//initialize Geometron global variables
     <img id = "img0630"/>
 </div>
 <!--</page0630>-->
-<!--<page0666>-->
-<div class = "page screenpage" id = "div0666">
-    <div class = "feed" id = "feed0666">
-    </div>
-</div> 
-<!--</page0666>-->
-<!--<page0600>-->
-<div class = "page screenpage" id = "div0666">
-    <div class = "feed" id = "feed0666">
-        <h3>http://www.lafelabs.org</h3>
-        <h3>/startdeck/</h3>
-        <h3>/hello/</h3>     
-        <img src = "qrcode.png"/>
-        <img src = "hello_keyboard.svg" style = "width:100%;"/>
-        <h3><a href = "hello_keyboard.svg">hello_keyboard.svg</a></h3>
-    </div>
-</div> 
-<!--</page0600>-->    
+  
 <!--<page0700>-->
 <script id = "script0700">
-    pages = document.getElementsByClassName("page");
-    currentPage = 0;
-    for(index = 0;index < pages.length;index++){
-        if(index != currentPage){
-            pages[index].style.display = "none";
-        }
-    }
-    
+
     document.getElementById("backbutton").onclick = function(){
-        pages[currentPage].style.display = "none";
-        currentPage--;
-        if(currentPage < 0){
-            currentPage = pages.length - 1;
+        dataIndex--;
+        if(dataIndex < 0){
+            dataIndex = dataArray.length - 1;
         }
-        pages[currentPage].style.display = "block";
         initPage();
     }
     document.getElementById("fwdbutton").onclick = function(){
-        pages[currentPage].style.display = "none";
-        currentPage++;
-        if(currentPage > pages.length -1){
-            currentPage = 0;
+        dataIndex++;
+        if(dataIndex > dataArray.length - 1){
+            dataIndex = 0;
         }
-        pages[currentPage].style.display = "block";
-        initPage();
-    
+        initPage();    
     }          
     
     function redraw(){
-        if(pages[currentPage].id == "div0601"){
-            redraw0701();
-        }
-        if(pages[currentPage].id == "div0610"){
-            redraw0710();
-        }
-        if(pages[currentPage].id == "div0630"){
-            redraw0730();
-        }
-    
+            redraw0730();    
     }
     function initPage(){
-        if(pages[currentPage].id == "div0600"){
-            table0600.style.display = "none";
-        }
-        if(pages[currentPage].id == "div0630"){
-            table0600.style.display = "block";
             init0730();
-        }
-        if(pages[currentPage].id == "div0666"){
-            table0600.style.display = "none";
-        }
-        document.getElementById("pageNumber").innerHTML = "Page " + pages[currentPage].id.substring(3);
-
     }    
     var viewButts = document.getElementById("table0600").getElementsByTagName("TD");
     for(var index = 0;index < viewButts.length;index++){
@@ -1370,7 +1334,6 @@ doTheThing(07);//initialize Geometron global variables
         viewButts[index].innerHTML = "";    
         var newcanvas = document.createElement("CANVAS");
         viewButts[index].appendChild(newcanvas);
-
         var buttonSize = innerWidth*0.8/10;
 
         side = buttonSize;
@@ -1395,16 +1358,17 @@ doTheThing(07);//initialize Geometron global variables
 <!--</page0700>-->
 <!--<page0730>-->
 <script>
-    
+dataIndex = 0;
 init0730();
 function init0730(){
-    currentAddress = 0250;
-    unit = 100;
+    dataArray = document.getElementsByClassName("data");
+    currentAddress = 0270;
+    currentData = JSON.parse(dataArray[dataIndex].innerHTML);
+    unit = currentData.unit;
 
     boxes0630 = document.getElementsByClassName("box0630");
-    data0430 = JSON.parse(document.getElementById("data0430").innerHTML);
-    for(var index = 0;index < data0430.length;index++){
-        data0430[index].onOff = 0;
+    for(var index = 0;index < currentData.boxes.length;index++){
+        currentData.boxes[index].onOff = 0;
     }
 
 
@@ -1426,7 +1390,17 @@ function init0730(){
     inputs0630[5].value = height0630;
 
     buttons0630 = document.getElementById("control0630").getElementsByClassName("viewButt");
+
+    currentTable[currentAddress] = currentData.glyph;
     currentGlyph = currentTable[currentAddress] + ",0207,";
+        
+    inputs0630[6].value  = currentData.imgurl;        
+    document.getElementById("img0630").src = currentData.imgurl;
+
+    inputs0630[7].value  = currentData.imgw;        
+    inputs0630[8].value  = currentData.left;        
+    inputs0630[9].value  = currentData.top;        
+
     redraw0730();
 }
     function redraw0730(){
@@ -1454,13 +1428,14 @@ function init0730(){
         }
         inputs0630[0].value = "0" + currentAddress.toString(8);
         
-        for(var index = 0;index < data0430.length;index++){
-            if(data0430[index].onOff == 1){
-                boxes0630[index].style.left = (x0 + data0430[index].left*unit).toString() + "px";
-                boxes0630[index].style.top = (y0 - data0430[index].top*unit).toString() + "px";
-                boxes0630[index].style.width = (data0430[index].w*unit).toString() + "px";
-                boxes0630[index].style.fontSize = (data0430[index].fontSize*unit).toString() + "px";
-                boxes0630[index].style.height = (data0430[index].w*unit).toString() + "px";
+        
+        for(var index = 0;index < currentData.boxes.length;index++){
+            if(currentData.boxes[index].onOff == 0){
+                boxes0630[index].innerHTML = "";
+                boxes0630[index].style.display = "none";
+            }
+            else{
+                boxes0630[index].style.display = "block";
             }
         }
 
@@ -1790,7 +1765,7 @@ function getJSON(){
     jsonout += "\"imgurl\":\"" + inputs0630[6].value + "\",\n";
     jsonout += "\"imgw\":" + inputs0630[7].value + ",\n";
     jsonout += "\"left\":" + inputs0630[8].value + ",\n";
-    jsonout += "\"boxes\":" + JSON.stringify(data0430) + ",\n";
+    jsonout += "\"boxes\":" + JSON.stringify(currentData.boxes) + ",\n";
     jsonout += "\"top\":" + inputs0630[9].value + "\n}\n";
 
     return jsonout;
@@ -1799,41 +1774,6 @@ function getJSON(){
 
 </script>
 <!--</page0730>-->  
-<!--<page0766>-->  
-<script>
-
-var httpc = new XMLHttpRequest();
-httpc.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var instring = this.responseText;//feed.txt, a list of locations of svg files, separated by "\n"
-        var filenames = instring.split("\n");
-        for(var index = 0;index < filenames.length;index++){
-            var newimg = document.createElement("IMG");
-            newimg.style.border = "solid";
-            document.getElementById("feed0666").appendChild(newimg);
-            newimg.src = "svg/" + filenames[index];
-            var newp = document.createElement("P");
-            var newa = document.createElement("A");
-            newa.innerHTML = filenames[index];
-            newa.href = "http://www.lafelabs.org/startdeck/hello/svg/" + filenames[index];
-            newp.appendChild(newa);
-            document.getElementById("feed0666").appendChild(newp);
-            var textfile = filenames[index].substring(0,filenames[index].length - 3) + "txt";
-            var newp = document.createElement("P");
-            var newa = document.createElement("A");
-            newa.innerHTML = textfile;
-            newa.href = "http://www.lafelabs.org/startdeck/hello/svg/" + textfile;
-            newp.appendChild(newa);
-            document.getElementById("feed0666").appendChild(newp);
-
-
-        }
-    }
-}
-httpc.open("GET", "feed.txt", true);
-httpc.send();
-</script>
-<!--</page0766>-->  
 <!--<page0500>-->
 <style id = "style0500">
 html{
